@@ -34,7 +34,6 @@ plt.plot(wot["x"], wot["y"], label='Width of Tile')
 plt.plot(wob["x"], wob["y"], label='Width of Book')
 
 # graph trend lines
-
 plt.plot(lor["x"], [10204.5] * 8, color='black', linewidth=.5)
 plt.plot(wor["x"], [8063.5] * 8, color='black', linewidth=.5)
 plt.plot(lob["x"], [5892.5] * 8, color='black', linewidth=.5)
@@ -46,10 +45,16 @@ plt.plot(wob["x"], [210.0] * 8, color='black', linewidth=.5)
 plt.xlabel('Group Number (#)')
 plt.ylabel('Measurements (mm)')
 
+# enable ticks
 plt.yticks(list(range(0, 11000, 500)))
+
+# enable grid
+plt.grid(True)
 
 plt.title('Lab #1 - Classroom Measurement')
 
+# put legend on graph
 plt.legend(loc='center right')
 
-plt.savefig('./chemlab1data.png', format='png', dpi=1200)
+# save the graph to a file
+plt.savefig('./chemlab1datawithgrid.png', format='png', dpi=1200)
